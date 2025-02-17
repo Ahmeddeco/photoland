@@ -24,7 +24,7 @@ model Product {
   categoryId    String
   seller        Seller      @relation(fields: [sellerId], references: [id])
   sellerId      String
-  image         String      @unique
+  imageUrl      String[]    @unique
   price         Int         @default(0)
   discount      Int?        @default(0)
   isNew         Boolean

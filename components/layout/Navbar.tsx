@@ -2,7 +2,7 @@
 
 import { ThemeSwitcher } from '../themes/ThemeSwitcher'
 import { Button } from '@heroui/react'
-import UploadThing from './UploadThing'
+import { UploadThing } from './UploadThing'
 
 const Navbar = () => {
 	return (

@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "studio":"prisma studio",
+    "migrate":"prisma migrate dev --name init"
   },
   "dependencies": {
     "@heroui/avatar": "^2.2.7",

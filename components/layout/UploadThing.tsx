@@ -1,24 +1,29 @@
-'use client'
+// 'use client'
 
-import { UploadButton } from '@/utils/uploadthing'
+import { OurFileRouter } from '@/app/api/uploadthing/core'
+import { UploadDropzone } from '@uploadthing/react'
 
-const UploadThing = () => {
-	return (
-		<main className='flex min-h-screen flex-col items-center justify-between p-24'>
-			<UploadButton
-				endpoint='imageUploader'
-				onClientUploadComplete={(res) => {
-					// Do something with the response
-					console.log('Files: ', res)
-					alert('Upload Completed')
-				}}
-				onUploadError={(error: Error) => {
-					// Do something with the error.
-					alert(`ERROR! ${error.message}`)
-				}}
-			/>
-		</main>
-	)
-}
+export const UploadThing = () => (
+	<UploadDropzone<OurFileRouter, 'imageUploader'>
+		endpoint='imageUploader'
+		onClientUploadComplete={(res) => {
+			// Do something with the response
 
-export default UploadThing
+			const imgUrl = res[0].ufsUrl
+
+			console.log('Files: ', imgUrl, res)
+			alert('Upload Completed')
+		}}
+		onUploadError={(error: Error) => {
+			alert(`ERROR! ${error.message}`)
+		}}
+		onUploadBegin={(name) => {
+			// Do something once upload begins
+			console.log('Uploading: ', name)
+		}}
+		onDrop={(acceptedFiles) => {
+			// Do something with the accepted files
+			console.log('Accepted files: ', acceptedFiles)
+		}}
+	/>
+)
