@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "studio":"prisma studio",
-    "migrate":"prisma migrate dev --name init"
+    "studio": "prisma studio",
+    "migrate": "prisma migrate dev --name init"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.11.3",
     "@heroui/avatar": "^2.2.7",
     "@heroui/button": "^2.2.10",
     "@heroui/react": "^2.6.14",

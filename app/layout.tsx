@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer'
 import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin'
 import { extractRouterConfig } from 'uploadthing/server'
 import { ourFileRouter } from '@/app/api/uploadthing/core'
+import { ClerkProvider } from '@clerk/nextjs'
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -25,21 +26,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: Readonly<{
+}: {
 	children: React.ReactNode
-}>) {
+}) {
 	return (
-		<html lang='en' suppressHydrationWarning>
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				<Providers>
-					<Navbar />
-					<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-					<main className='min-h-screen container'>{children}</main>
-					<Footer />
-				</Providers>
-			</body>
-		</html>
+		<ClerkProvider>
+			<html lang='en' suppressHydrationWarning>
+				<body
+					className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+					suppressHydrationWarning
+				>
+					<Providers>
+						<Navbar />
+						<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+						<main className='min-h-screen container mt-16'>{children}</main>
+						<Footer />
+					</Providers>
+				</body>
+			</html>
+		</ClerkProvider>
 	)
 }
