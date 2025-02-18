@@ -22,7 +22,7 @@ export function ThemeSwitcher() {
 			size='lg'
 			endContent={<Moon />}
 			startContent={<Sun />}
-			onValueChange={(isSelected) => setTheme(isSelected ? 'light' : 'dark')}
+			onValueChange={(isSelected) => setTheme(isSelected ? 'dark' : 'light')}
 		/>
 	)
 }
