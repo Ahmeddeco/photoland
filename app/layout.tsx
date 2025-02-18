@@ -8,6 +8,7 @@ import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin'
 import { extractRouterConfig } from 'uploadthing/server'
 import { ourFileRouter } from '@/app/api/uploadthing/core'
 import { ClerkProvider } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -30,11 +31,24 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<ClerkProvider>
+		<ClerkProvider
+			appearance={{
+				baseTheme: dark,
+				variables: {
+					colorBackground: '#2a2b31',
+					fontSize: 'xl',
+					colorPrimary: '#F6CC44',
+					colorInputText: '#F6CC44',
+				},
+				layout: {
+					socialButtonsPlacement: 'bottom',
+					socialButtonsVariant: 'blockButton',
+				},
+			}}
+		>
 			<html lang='en' suppressHydrationWarning>
 				<body
 					className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-					suppressHydrationWarning
 				>
 					<Providers>
 						<Navbar />

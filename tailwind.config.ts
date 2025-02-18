@@ -7,7 +7,7 @@ export default withUt({
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/components/(avatar|button|toggle|ripple|spinner).js"
+    "./node_modules/@heroui/theme/dist/components/(avatar|button|card|drawer|form|input|select|skeleton|toggle|user|ripple|spinner|modal|listbox|divider|popover|scroll-shadow).js"
   ],
   theme: {
     extend: {

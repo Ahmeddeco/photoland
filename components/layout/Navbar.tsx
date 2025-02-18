@@ -22,7 +22,7 @@ const Navbar = async () => {
 			<ThemeSwitcher />
 
 			<div className='flex items-center justify-center gap-4'>
-				<SignedOut>
+				<SignedOut >
 					<SignInButton />
 					<SignUpButton />
 				</SignedOut>
