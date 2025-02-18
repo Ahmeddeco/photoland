@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import { Providers } from './providers'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin'
@@ -9,15 +7,13 @@ import { extractRouterConfig } from 'uploadthing/server'
 import { ourFileRouter } from '@/app/api/uploadthing/core'
 import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
+import { ThemeProvider } from '@/components/themes/theme-provider'
+import localFont from 'next/font/local'
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
+const expo2 = localFont({
+	src: '../public/fonts/Exo2-Italic-VariableFont_wght.ttf',
+	display: 'swap',
+	variable: '--expo-2',
 })
 
 export const metadata: Metadata = {
@@ -48,14 +44,19 @@ export default function RootLayout({
 		>
 			<html lang='en' suppressHydrationWarning>
 				<body
-					className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+					className={`${expo2.className} antialiased bg-background text-foreground`}
 				>
-					<Providers>
+					<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+					<ThemeProvider
+						attribute='class'
+						defaultTheme='system'
+						enableSystem
+						disableTransitionOnChange
+					>
 						<Navbar />
-						<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-						<main className='min-h-screen container mt-16'>{children}</main>
+						<main className='min-h-dvh container mt-20'>{children}</main>
 						<Footer />
-					</Providers>
+					</ThemeProvider>
 				</body>
 			</html>
 		</ClerkProvider>

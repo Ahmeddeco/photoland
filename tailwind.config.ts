@@ -1,8 +1,8 @@
-import { heroui } from '@heroui/theme'
 import type { Config } from "tailwindcss"
 import { withUt } from "uploadthing/tw"
 
 export default withUt({
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,50 +17,60 @@ export default withUt({
           sm: '2rem',
           lg: '4rem',
           xl: '5rem',
-          '2xl': '6rem',
+          '2xl': '6rem'
         },
         center: true
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))'
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))'
+        },
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))'
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))'
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))'
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))'
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))'
+        },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        chart: {
+          '1': 'hsl(var(--chart-1))',
+          '2': 'hsl(var(--chart-2))',
+          '3': 'hsl(var(--chart-3))',
+          '4': 'hsl(var(--chart-4))',
+          '5': 'hsl(var(--chart-5))'
+        }
       },
-    },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)'
+      }
+    }
   },
   plugins: [
-    heroui({
-      prefix: "heroui", // prefix for themes variables
-      addCommonColors: true, // override common colors (e.g. "blue", "green", "pink").
-      defaultTheme: "light", // default theme from the themes object
-      defaultExtendTheme: "light", // default theme to extend on custom themes
-      layout: {}, // common layout tokens (applied to all themes)
-      themes: {
-        light: {
-          layout: {}, // light theme layout tokens
-          colors: {
-            background: "#ffffff",
-            foreground: "#2a2b31",
-            primary: '#F6CC44',
-            secondary: '#42A6FF',
-            success: '#89E047',
-            warning: '#FFBB3D',
-            danger: '#FF518B',
-          }, // light theme colors
-        },
-        dark: {
-          layout: {}, // dark theme layout tokens
-          colors: {
-            background: "#2a2b31",
-            foreground: "#ffffff",
-            primary: '#F6CC44',
-            secondary: '#42A6FF',
-            success: '#89E047',
-            warning: '#FFBB3D',
-            danger: '#FF518B',
-          }, // dark theme colors
-        },
-        // ... custom themes
-      },
-    }),
+    require("tailwindcss-animate")
   ],
 }) satisfies Config 
