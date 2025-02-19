@@ -18,7 +18,7 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 		<>
 			<Form
 				action={'/search'}
-				className=' w-full flex md:flex-row flex-col md:gap-4 items-center justify-center'
+				className=' w-full flex lg:flex-row flex-col lg:gap-4 items-center justify-center'
 			>
 				<Input
 					name='product'
@@ -31,7 +31,7 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 					radius='md'
 				/>
 				<Button
-					className='md:flex hidden items-center justify-center'
+					className='lg:flex hidden items-center justify-center'
 					type='submit'
 					variant='solid'
 					color='primary'
@@ -43,7 +43,7 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 
 				{/* mobile btn */}
 				<Button
-					className='flex md:hidden  items-center justify-center h-16'
+					className='flex lg:hidden  items-center justify-center h-16'
 					type='submit'
 					variant='solid'
 					color='primary'

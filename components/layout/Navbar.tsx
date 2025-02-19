@@ -23,8 +23,8 @@ const Navbar = () => {
 	// const user = await currentUser()
 
 	return (
-		<header className=' fixed top-0 right-0 left-0 py-2 md:py-4  '>
-			<nav className='container md:flex items-center justify-between gap hidden'>
+		<header className=' fixed top-0 right-0 left-0 py-2 lg:py-4 bg-default '>
+			<nav className='container lg:flex items-center justify-between gap hidden'>
 				{/* Logo */}
 				<div className=' w-3/12'>
 					<Logo />
@@ -35,7 +35,7 @@ const Navbar = () => {
 				</div>
 
 				{/* ThemeSwitcher & Auth */}
-				<div className='flex items-center justify-end gap-2 md:gap-4 w-3/12'>
+				<div className='flex items-center justify-end gap-2 lg:gap-4 w-3/12'>
 					<ThemeSwitcher />
 
 					<>
@@ -51,7 +51,7 @@ const Navbar = () => {
 			</nav>
 
 			{/* Mobile Nav */}
-			<nav className='md:hidden flex items-center justify-between container'>
+			<nav className='lg:hidden flex items-center justify-between container'>
 				<Logo />
 				<div className='flex items-center justify-center gap-2 '>
 					<ThemeSwitcher />

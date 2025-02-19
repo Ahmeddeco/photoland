@@ -4,17 +4,17 @@ import CategoriesAside from './CategoriesAside'
 
 const HeroSection = () => {
 	return (
-		<section className='flex flex-col md:flex-row items-center justify-between gap h-[555px]'>
+		<section className='flex flex-col lg:flex-row items-center justify-between gap lg:h-[555px] h-auto'>
 			{/* left aside */}
-			<aside className='md:w-3/12 w-full h-full md:block hidden '>
+			<aside className='lg:w-3/12 w-full h-full lg:block hidden '>
 				<CategoriesAside />
 			</aside>
 			{/* main */}
-			<div className='md:w-6/12 w-full h-full'>
+			<div className='lg:w-6/12 w-full h-full'>
 				<MainCard />
 			</div>
 			{/* right */}
-			<div className='md:w-3/12 w-full h-full bg-secondary'>right</div>
+			<div className='lg:w-3/12 w-full h-full bg-secondary'>right</div>
 		</section>
 	)
 }

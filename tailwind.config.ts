@@ -11,7 +11,11 @@ export default withUt({
     "./node_modules/@heroui/theme/dist/components/(button|card|divider|drawer|input|ripple|spinner|modal|form).js"
   ],
   theme: {
+
     extend: {
+      backgroundImage: {
+        hero: "url('/images/mainSlider_bg.webp')"
+      },
       container: {
         padding: {
           DEFAULT: '1rem',
