@@ -6,5 +6,5 @@ export default async function CategoryPage({
 	const category = (await params).category.toString()
 	console.log(category)
 
-	return <main>CategoryPage ${category}</main>
+	return <main>{`CategoryPage ${category}`}</main>
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import { auth, currentUser } from '@clerk/nextjs/server'
 import Image from 'next/image'
 import {
@@ -12,7 +14,7 @@ import SearchBar from './SearchBar'
 import MobileDrawer from './MobileDrawer'
 import ThemeSwitcher from '../themes/ThemeSwitcher'
 
-const Navbar = async () => {
+const Navbar = () => {
 	// const { userId } = await auth()
 
 	// if (!userId) {
@@ -51,7 +53,7 @@ const Navbar = async () => {
 			{/* Mobile Nav */}
 			<nav className='md:hidden flex items-center justify-between container'>
 				<Logo />
-				<div className='flex items-center justify-center '>
+				<div className='flex items-center justify-center gap-2 '>
 					<ThemeSwitcher />
 					<MobileDrawer />
 				</div>

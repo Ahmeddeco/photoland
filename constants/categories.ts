@@ -1,22 +1,22 @@
 export const categories = [
   {
     title: 'dslr',
-    href: `/dslr}`,
+    href: `dslr`,
   },
   {
     title: 'mirrorless',
-    href: `/mirrorless}`,
+    href: `mirrorless`,
   },
   {
     title: 'compact',
-    href: `/compact}`,
+    href: `compact`,
   },
   {
     title: 'film',
-    href: `/film}`,
+    href: `film`,
   },
   {
     title: 'professional',
-    href: `/professional}`,
+    href: `professional`,
   },
 ]

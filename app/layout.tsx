@@ -44,7 +44,7 @@ export default function RootLayout({
 		>
 			<html lang='en' suppressHydrationWarning>
 				<body
-					className={`${expo2.className} antialiased bg-background text-foreground`}
+					className={`${expo2.className} antialiased  text-foreground`}
 				>
 					<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
 					<ThemeProvider
@@ -54,7 +54,7 @@ export default function RootLayout({
 						disableTransitionOnChange
 					>
 						<Navbar />
-						<main className='min-h-dvh container mt-20'>{children}</main>
+						<main className='min-h-dvh container md:mt-24 mt-16'>{children}</main>
 						<Footer />
 					</ThemeProvider>
 				</body>
