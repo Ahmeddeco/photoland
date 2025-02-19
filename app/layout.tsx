@@ -11,7 +11,7 @@ import { ThemeProvider } from '@/components/themes/theme-provider'
 import localFont from 'next/font/local'
 
 const expo2 = localFont({
-	src: '../public/fonts/Exo2-Italic-VariableFont_wght.ttf',
+	src: '../public/fonts/Exo2-VariableFont_wght.ttf',
 	display: 'swap',
 	variable: '--expo-2',
 })

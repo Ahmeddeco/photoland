@@ -14,10 +14,10 @@ const SearchBar = () => {
 					name='product'
 					type='text'
 					placeholder='Search for a product'
-					className='h-full bg-foreground text-background rounded-r-none'
+					className='h-full bg-foreground text-background  md:rounded-r-none'
 				/>
 				<Button
-					className='h-full rounded-l-none w-24 flex items-center justify-center'
+					className='hidden h-full rounded-l-none w-24 md:flex items-center justify-center'
 					type='submit'
 				>
 					<Search size={32} strokeWidth={2.5} />

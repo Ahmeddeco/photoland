@@ -1,4 +1,5 @@
 import React from 'react'
+import MainCard from './MainCard'
 
 const HeroSection = () => {
 	return (
@@ -8,7 +9,9 @@ const HeroSection = () => {
 				aside
 			</aside>
 			{/* main */}
-			<div className='md:w-6/12 w-full h-full bg-red-400'>main</div>
+			<div className='md:w-6/12 w-full h-full'>
+				<MainCard />
+			</div>
 			{/* right */}
 			<div className='md:w-3/12 w-full h-full bg-yellow-400'>right</div>
 		</section>
