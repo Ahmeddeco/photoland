@@ -24,7 +24,7 @@ const ThemeSwitcher = () => {
 					<Moon
 						size={28}
 						strokeWidth={2}
-						className='absolute  rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-primary'
+						className='absolute  rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 '
 					/>
 				</Button>
 			</DropdownTrigger>

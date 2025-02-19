@@ -1,26 +1,57 @@
 import Form from 'next/form'
-
 import { Search } from 'lucide-react'
+import { Button, Input } from '@heroui/react'
 
-const SearchBar = () => {
+type SearchBarTypes = {
+	onPress?: () => void
+}
+
+const SearchBar = ({ onPress }: SearchBarTypes) => {
+	const delay = () => {
+		setTimeout(() => {
+			if (onPress) {
+				onPress()
+			}
+		}, 300)
+	}
 	return (
 		<>
 			<Form
 				action={'/search'}
-				className='h-10 w-full flex items-center justify-center'
+				className=' w-full flex md:flex-row flex-col md:gap-4 items-center justify-center'
 			>
-				<input
+				<Input
 					name='product'
 					type='text'
 					placeholder='Search for a product'
-					className='h-full bg-foreground text-background  md:rounded-r-none'
+					className='h-full'
+					color='primary'
+					variant='bordered'
+					size='md'
+					radius='md'
 				/>
-				<button
-					className='hidden h-full rounded-l-none w-24 md:flex items-center justify-center'
+				<Button
+					className='md:flex hidden items-center justify-center'
 					type='submit'
+					variant='solid'
+					color='primary'
+					size='md'
+					radius='md'
 				>
-					<Search size={32} strokeWidth={2.5} />
-				</button>
+					<Search size={28} strokeWidth={2} className='text-background' />
+				</Button>
+
+				{/* mobile btn */}
+				<Button
+					className='flex md:hidden  items-center justify-center h-16'
+					type='submit'
+					variant='solid'
+					color='primary'
+					fullWidth
+					onPress={delay}
+				>
+					<Search size={28} strokeWidth={2} className='text-background' />
+				</Button>
 			</Form>
 		</>
 	)

@@ -43,7 +43,7 @@ export default withUt({
           secondary: '#28B4FF',
           success: '#90E540',
           warning: '#FFC02D',
-          danger: '#FF759E'
+          danger: '#DB3A2A'
         }, // light theme colors
       },
       dark: {
@@ -56,10 +56,10 @@ export default withUt({
           foreground: '#E4E4E7', // zinc-200
           focus: '#F7B750',
           primary: '#F6CC44',
-          secondary: '#28B4FF',
+          secondary: '#025687',
           success: '#90E540',
           warning: '#FFC02D',
-          danger: '#FF759E',
+          danger: '#93121A',
         }, // dark theme colors
       },
       // ... custom themes

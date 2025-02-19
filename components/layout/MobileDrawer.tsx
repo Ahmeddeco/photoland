@@ -1,6 +1,4 @@
 import { AlignJustify } from 'lucide-react'
-import { categories } from '@/constants/categories'
-import Link from 'next/link'
 import SearchBar from './SearchBar'
 import {
 	Drawer,
@@ -32,17 +30,16 @@ const MobileDrawer = () => {
 				<DrawerContent>
 					{(onClose) => (
 						<>
-							<DrawerHeader className='flex flex-col gap-1 uppercase bg-primary text-default font-bold'>
+							<DrawerHeader className='flex flex-col gap-1 uppercase bg-primary text-zinc-900 font-semibold'>
 								category
 							</DrawerHeader>
 							<DrawerBody>
-								<div className='my-12 flex flex-col gap-8' onClick={onClose}>
-									<SearchBar />
+								<div className='my-8' onClick={onClose}>
 									<CategoriesNavLinks />
 								</div>
 							</DrawerBody>
-							<DrawerFooter>
-								<Logo />
+							<DrawerFooter className='flex flex-col gap-8 '>
+								<SearchBar onPress={onClose} />
 							</DrawerFooter>
 						</>
 					)}
