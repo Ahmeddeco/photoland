@@ -1,4 +1,3 @@
-import { Card, CardHeader, CardBody, CardFooter } from '@heroui/card'
 import Image from 'next/image'
 import heroImg from '@/public/images/heroImage.png'
 import { Button } from '@heroui/button'
@@ -14,7 +13,7 @@ const MainCard = () => {
 				</div>
 				<Button
 					className='uppercase text-zinc-900 font-bold '
-					variant='shadow'
+					variant='solid'
 					color='primary'
 					size='lg'
 				>
@@ -22,7 +21,7 @@ const MainCard = () => {
 				</Button>
 			</div>
 			{/* Image */}
-			<div className='h-full flex-1 w-full '>
+			<div className='h-full flex-1 w-full flex items-center justify-center '>
 				<Image
 					src={heroImg}
 					alt={'heroImg'}

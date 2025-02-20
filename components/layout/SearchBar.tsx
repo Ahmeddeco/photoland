@@ -38,7 +38,7 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 					size='md'
 					radius='md'
 				>
-					<Search size={28} strokeWidth={2} className='text-background' />
+					<Search size={28} strokeWidth={2} className='text-zinc-900' />
 				</Button>
 
 				{/* mobile btn */}
@@ -50,7 +50,7 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 					fullWidth
 					onPress={delay}
 				>
-					<Search size={28} strokeWidth={2} className='text-background' />
+					<Search size={28} strokeWidth={2} className='text-zinc-900' />
 				</Button>
 			</Form>
 		</>

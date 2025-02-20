@@ -52,7 +52,7 @@ export default function RootLayout({
 						disableTransitionOnChange
 					>
 						<Navbar />
-						<main className='min-h-dvh container lg:mt-24 mt-16'>
+						<main className='min-h-dvh h-auto container lg:mt-28 mt-20'>
 							{children}
 						</main>
 						<Footer />

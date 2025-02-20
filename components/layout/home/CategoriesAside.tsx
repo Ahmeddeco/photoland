@@ -7,7 +7,7 @@ const CategoriesAside = () => {
 		<>
 			<Card className='w-full h-full bg-default'>
 				{/* CardHeader */}
-				<CardHeader className='uppercase text-center text-zinc-900 font-bold bg-primary'>
+				<CardHeader className='uppercase  text-zinc-900 font-bold bg-primary' >
 					browse Categories
 				</CardHeader>
 
@@ -17,7 +17,7 @@ const CategoriesAside = () => {
 						<Link
 							href={`category/${href}`}
 							key={href}
-							className='uppercase font-semibold text-lg'
+							className='uppercase font-semibold'
 						>
 							{title}
 						</Link>
