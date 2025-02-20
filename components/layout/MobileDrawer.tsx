@@ -37,9 +37,10 @@ const MobileDrawer = () => {
 								<div className='my-8' onClick={onClose}>
 									<CategoriesNavLinks />
 								</div>
-							</DrawerBody>
-							<DrawerFooter className='flex flex-col gap-8 '>
 								<SearchBar onPress={onClose} />
+							</DrawerBody>
+							<DrawerFooter className=' '>
+								<Logo/>
 							</DrawerFooter>
 						</>
 					)}

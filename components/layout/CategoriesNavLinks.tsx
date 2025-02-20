@@ -1,20 +1,25 @@
 import { categories } from '@/constants/categories'
 import Link from 'next/link'
-import React from 'react'
+import { usePathname } from 'next/navigation'
 
 const CategoriesNavLinks = () => {
-	return <div className='flex flex-col gap-8 uppercase '>
-  {categories.map(({ href, title }) => (
-    <Link
-      type='submit'
-      href={`/category/${href}`}
-      key={href}
-    
-    >
-      {title}
-    </Link>
-  ))}
-</div>
+	const pathName = usePathname()
+
+	return (
+		<div className='flex flex-col gap-8 uppercase '>
+			{categories.map(({ href, title }) => (
+				<Link
+					href={href}
+					key={href}
+					className={`uppercase font-semibold ${
+						pathName === href && 'text-primary'
+					}`}
+				>
+					{title}
+				</Link>
+			))}
+		</div>
+	)
 }
 
 export default CategoriesNavLinks

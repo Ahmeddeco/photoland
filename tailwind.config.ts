@@ -39,15 +39,16 @@ export default withUt({
       light: {
         layout: {}, // light theme layout tokens
         colors: {
-          default: '#E4E4E7', // zinc-200
+          default: '#D4D4D8', // zinc-300
           foreground: '#27272A', // zinc-800
-          background: '#F4F4F5', // zinc-100
+          background: '#E4E4E7', // zinc-200
           focus: '#F6CC44',
           primary: '#F7B750',
           secondary: '#28B4FF',
           success: '#90E540',
           warning: '#FFC02D',
-          danger: '#DB3A2A'
+          danger: '#DB3A2A',
+          content4: '#52525B' // zinc-600
         }, // light theme colors
       },
       dark: {
@@ -64,6 +65,7 @@ export default withUt({
           success: '#90E540',
           warning: '#FFC02D',
           danger: '#93121A',
+          content4: '#A1A1AA' // zinc-400
         }, // dark theme colors
       },
       // ... custom themes

@@ -43,7 +43,7 @@ export default function RootLayout({
 			}}
 		>
 			<html lang='en' suppressHydrationWarning>
-				<body className={`${expo2.className} antialiased  text-foreground`}>
+				<body className={`${expo2.className} antialiased  text-foreground `}>
 					<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
 					<ThemeProvider
 						attribute='class'

@@ -7,7 +7,7 @@ const SideCard = () => {
 		<div className='flex flex-col gap-4 lg:gap-8 lg:h-full h-auto '>
 			{heroSideRight.map(({ title, image }, i) => (
 				<div
-					className=' bg-default rounded-lg h-full w-full flex lg:flex-row flex-col-reverse lg:items-center lg:justify-between justify-center '
+					className=' bg-default rounded-lg h-full w-full flex lg:flex-row flex-col-reverse lg:items-center lg:justify-between justify-center shadow-lg '
 					key={i}
 				>
 					{/* text & button */}

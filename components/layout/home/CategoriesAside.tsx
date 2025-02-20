@@ -1,27 +1,19 @@
-import { categories } from '@/constants/categories'
-import Link from 'next/link'
+'use client'
+
 import { Card, CardHeader, CardBody } from '@heroui/card'
+import CategoriesNavLinks from '../CategoriesNavLinks'
 
 const CategoriesAside = () => {
 	return (
 		<>
 			<Card className='w-full h-full bg-default'>
 				{/* CardHeader */}
-				<CardHeader className='uppercase  text-zinc-900 font-bold bg-primary' >
+				<CardHeader className='uppercase  text-zinc-900 font-bold bg-primary'>
 					browse Categories
 				</CardHeader>
-
 				{/* CardBody */}
 				<CardBody className='pt-6 flex flex-col gap-6'>
-					{categories.map(({ href, title }) => (
-						<Link
-							href={`category/${href}`}
-							key={href}
-							className='uppercase font-semibold'
-						>
-							{title}
-						</Link>
-					))}
+					<CategoriesNavLinks />
 				</CardBody>
 			</Card>
 		</>

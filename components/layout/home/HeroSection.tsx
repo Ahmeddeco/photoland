@@ -11,11 +11,11 @@ const HeroSection = () => {
 				<CategoriesAside />
 			</aside>
 			{/* main */}
-			<div className='lg:w-7/12 w-full h-full'>
+			<div className='lg:w-7/12 w-full h-full  shadow-lg'>
 				<MainCard />
 			</div>
 			{/* right */}
-			<div className='lg:w-3/12 w-full h-full '>
+			<div className='lg:w-3/12 w-full h-full  '>
 				<SideCard />
 			</div>
 		</section>
