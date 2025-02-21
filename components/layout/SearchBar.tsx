@@ -1,7 +1,5 @@
-'use client'
-
 import Form from 'next/form'
-import { Search } from 'lucide-react'
+import { IoSearch } from 'react-icons/io5'
 import { Button, Input } from '@heroui/react'
 
 type SearchBarTypes = {
@@ -40,7 +38,7 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 					size='lg'
 					radius='sm'
 				>
-					<Search size={28} strokeWidth={2} className='text-zinc-900' />
+					<IoSearch className='text-zinc-900 text-4xl font-black' />
 				</Button>
 
 				{/* mobile btn */}
@@ -54,7 +52,7 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 					size='lg'
 					onPress={delay}
 				>
-					<Search size={28} strokeWidth={2} className='text-zinc-900' />
+					<IoSearch className='text-zinc-900 text-2xl font-bold' />
 				</Button>
 			</Form>
 		</>

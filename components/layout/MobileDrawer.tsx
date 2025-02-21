@@ -1,4 +1,3 @@
-import { AlignJustify } from 'lucide-react'
 import SearchBar from './SearchBar'
 import {
 	Drawer,
@@ -11,6 +10,7 @@ import {
 } from '@heroui/react'
 import Logo from './Logo'
 import CategoriesNavLinks from './CategoriesNavLinks'
+import { FaBars } from 'react-icons/fa6'
 
 const MobileDrawer = () => {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure()
@@ -18,7 +18,7 @@ const MobileDrawer = () => {
 	return (
 		<>
 			<Button onPress={onOpen} variant='light' size='sm' isIconOnly>
-				<AlignJustify size={28} strokeWidth={2} />
+				<FaBars className='text-2xl'/>
 			</Button>
 
 			<Drawer

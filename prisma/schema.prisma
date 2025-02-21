@@ -38,6 +38,14 @@ model Category {
   Product Product[]
 }
 
+enum CategoryName {
+  compact
+  dslr
+  film
+  mirrorless
+  professional
+}
+
 model Manufacture {
   id      String    @id @default(uuid())
   name    String
@@ -55,10 +63,12 @@ model Seller {
   Product Product[]
 }
 
-enum CategoryName {
-  COMPACT
-  DSLR
-  FILM
-  MIRRORLESS
-  PROFESSIONAL
+model User {
+  id             String  @id @unique
+  firstName      String
+  lastName       String
+  emailAddresses String
+  phoneNumbers   String?
+  imageUrl       String?
+  hasImage       Boolean
 }

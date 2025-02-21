@@ -8,7 +8,7 @@ import React from 'react'
 
 const Footer = () => {
 	return (
-		<footer className='bg-default min-h-64 h-auto mt-16 py-16  shadow-lg '>
+		<footer className='bg-default min-h-64 h-auto mt-16 py-16 w-screen shadow-lg '>
 			<div className='container flex flex-col items-center justify-center text-center gap-8 max-w-4xl'>
 				<h4 className='uppercase'>subscribe to our newsletter</h4>
 				<h5 className='text-content4'>

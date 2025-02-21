@@ -4,15 +4,16 @@ import { usePathname } from 'next/navigation'
 
 const CategoriesNavLinks = () => {
 	const pathName = usePathname()
+	console.log(pathName)
 
 	return (
 		<div className='flex flex-col gap-8 uppercase '>
 			{categories.map(({ href, title }) => (
 				<Link
-					href={href}
+					href={`/category/${href}`}
 					key={href}
 					className={`uppercase font-semibold ${
-						pathName === href && 'text-primary'
+						pathName === `/category/${href}` ? 'text-primary' : ''
 					}`}
 				>
 					{title}

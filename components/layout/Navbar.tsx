@@ -13,6 +13,7 @@ import Logo from './Logo'
 import SearchBar from './SearchBar'
 import MobileDrawer from './MobileDrawer'
 import ThemeSwitcher from '../themes/ThemeSwitcher'
+import UserAuth from './UserAuth'
 
 const Navbar = () => {
 	// const { userId } = await auth()
@@ -37,24 +38,16 @@ const Navbar = () => {
 				{/* ThemeSwitcher & Auth */}
 				<div className='flex items-center justify-end gap-2 lg:gap-4 w-3/12'>
 					<ThemeSwitcher />
-
-					<>
-						<SignedOut>
-							<SignInButton />
-							<SignUpButton />
-						</SignedOut>
-						<SignedIn>
-							<UserButton />
-						</SignedIn>
-					</>
+					<UserAuth />
 				</div>
 			</nav>
 
 			{/* Mobile Nav */}
 			<nav className='lg:hidden flex items-center justify-between container'>
 				<Logo />
-				<div className='flex items-center justify-center gap-2 '>
+				<div className='flex items-center justify-center gap-4 '>
 					<ThemeSwitcher />
+					<UserAuth />
 					<MobileDrawer />
 				</div>
 			</nav>

@@ -8,7 +8,7 @@ export default withUt({
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/components/(button|card|divider|drawer|input|ripple|spinner|modal|form).js"
+    "./node_modules/@heroui/theme/dist/components/(avatar|button|card|divider|drawer|dropdown|input|ripple|spinner|modal|menu|popover|form).js"
   ],
   theme: {
 
