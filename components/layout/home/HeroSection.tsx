@@ -5,7 +5,7 @@ import SideCard from './SideCard'
 
 const HeroSection = () => {
 	return (
-		<section className='flex flex-col lg:flex-row items-center justify-between gap lg:h-[555px] h-auto'>
+		<section className='flex flex-col lg:flex-row items-center justify-between gap lg:h-[600px] h-auto'>
 			{/* left aside */}
 			<aside className='lg:w-2/12 w-full h-full lg:block hidden '>
 				<CategoriesAside />

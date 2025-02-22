@@ -11,7 +11,7 @@ const CategoriesNavLinks = () => {
 				<Link
 					href={`/category/${href}`}
 					key={href}
-					className={`uppercase font-semibold ${
+					className={` ${
 						pathName === `/category/${href}` ? 'text-primary' : ''
 					}`}
 				>

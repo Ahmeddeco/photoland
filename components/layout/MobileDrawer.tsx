@@ -5,29 +5,33 @@ import {
 	SheetHeader,
 	SheetFooter,
 	SheetTrigger,
+	SheetTitle,
+	SheetClose,
 } from '@/components/ui/sheet'
 
 import Logo from './Logo'
 import CategoriesNavLinks from './CategoriesNavLinks'
-import { FaBars } from 'react-icons/fa6'
+import { Button } from '../ui/button'
+import { Menu } from 'lucide-react'
 
 const MobileDrawer = () => {
 	return (
 		<Sheet>
 			<SheetTrigger>
-				<FaBars className='text-2xl' />
+				<Menu size={32} strokeWidth={2.5} />
 			</SheetTrigger>
-
 			<SheetContent>
-				<SheetHeader className='uppercase'>category</SheetHeader>
-
-				<div className='my-8'>
+				<SheetHeader className='uppercase'>
+					<SheetTitle>category</SheetTitle>
+				</SheetHeader>
+				<div className='my-12'>
 					<CategoriesNavLinks />
 				</div>
-				<SearchBar />
-
-				<SheetFooter className=' '>
-					<Logo />
+				<SheetFooter className='flex flex-col justify-between items-center gap-12'>
+					<SearchBar />
+					<Button asChild>
+						<Logo />
+					</Button>
 				</SheetFooter>
 			</SheetContent>
 		</Sheet>

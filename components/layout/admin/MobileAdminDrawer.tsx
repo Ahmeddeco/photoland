@@ -1,4 +1,3 @@
-import { FaBars } from 'react-icons/fa6'
 import {
 	Sheet,
 	SheetContent,
@@ -7,12 +6,15 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from '@/components/ui/sheet'
+import { Menu } from 'lucide-react'
 
 const MobileAdminDrawer = () => {
 	return (
 		<div className='lg:hidden block  bottom-16 right-16 fixed'>
 			<Sheet>
-				<SheetTrigger>Open</SheetTrigger>
+				<SheetTrigger>
+					<Menu size={32} strokeWidth={2.5} />
+				</SheetTrigger>
 				<SheetContent>
 					<SheetHeader>
 						<SheetTitle>Are you absolutely sure?</SheetTitle>

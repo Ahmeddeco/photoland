@@ -9,7 +9,7 @@ import { Card, CardContent } from '../ui/card'
 const Footer = () => {
 	return (
 		<footer>
-			<Card className='bg-default min-h-64 h-auto mt-16 py-16 w-screen shadow-lg '>
+			<Card className=' min-h-64 h-auto mt-16 py-16 w-screen shadow-lg '>
 				<CardContent className='container flex flex-col items-center justify-center text-center gap-8 max-w-4xl'>
 					<h4 className='uppercase'>subscribe to our newsletter</h4>
 					<h5 className='text-content4'>

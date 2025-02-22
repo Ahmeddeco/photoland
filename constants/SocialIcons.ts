@@ -1,32 +1,30 @@
-import React from 'react'
-import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6'
-import { IconType } from 'react-icons/lib'
+import { LucideIcon, Youtube, Instagram, Facebook, Twitter } from 'lucide-react'
 
 type socialIconsType = {
   title: string
-  icon: IconType
+  icon: LucideIcon
   href: string
 }
 
 export const socialIcons: socialIconsType[] = [
   {
     title: 'facebook',
-    icon: FaFacebook,
+    icon: Facebook,
     href: 'https://www.facebook.com/'
   },
   {
     title: 'x',
-    icon: FaXTwitter,
+    icon: Twitter,
     href: 'https://x.com/'
   },
   {
     title: 'instagram',
-    icon: FaInstagram,
+    icon: Instagram,
     href: 'https://www.instagram.com/'
   },
   {
-    title: 'facebook',
-    icon: FaYoutube,
+    title: 'youtube',
+    icon: Youtube,
     href: 'https://www.youtube.com/'
   },
 ]

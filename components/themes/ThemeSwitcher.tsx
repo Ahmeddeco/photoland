@@ -1,5 +1,4 @@
 import { useTheme } from 'next-themes'
-import { FaMoon, FaSun } from 'react-icons/fa6'
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -9,6 +8,7 @@ import {
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Button } from '../ui/button'
+import { Moon, Sun } from 'lucide-react'
 
 const ThemeSwitcher = () => {
 	const { setTheme } = useTheme()
@@ -16,9 +16,9 @@ const ThemeSwitcher = () => {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant={'outline'} size={'icon'}>
-					<FaSun className=' rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-xl' />
-					<FaMoon className='absolute  rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100  text-2xl' />
+				<Button variant={'ghost'} size={'icon'}>
+					<Sun className=' rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-xl' />
+					<Moon className='absolute  rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100  text-2xl' />
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent>
