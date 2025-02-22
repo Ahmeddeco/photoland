@@ -24,8 +24,8 @@ const Navbar = () => {
 	// const user = await currentUser()
 
 	return (
-		<header className='lg:h-20 h-16 fixed top-0 right-0 left-0 py-2 lg:py-4 bg-default z-50 shadow-lg'>
-			<nav className='container lg:flex items-center justify-between gap hidden'>
+		<header className='lg:h-20 h-auto fixed top-0 right-0 left-0 lg:py-4 py-2 bg-background/95 z-50 shadow-lg'>
+			<nav className='container lg:flex items-center justify-between hidden'>
 				{/* Logo */}
 				<div className=' w-2/12'>
 					<Logo />

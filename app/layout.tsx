@@ -43,7 +43,9 @@ export default function RootLayout({
 			}}
 		>
 			<html lang='en' suppressHydrationWarning>
-				<body className={`${expo2.className} antialiased  text-foreground `}>
+				<body
+					className={`${expo2.className} antialiased  text-foreground `}
+				>
 					<ThemeProvider
 						attribute='class'
 						defaultTheme='light'
