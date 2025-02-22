@@ -5,8 +5,6 @@ import {
 	SignUpButton,
 	UserButton,
 } from '@clerk/nextjs'
-import { Avatar } from '@heroui/avatar'
-import React from 'react'
 
 const UserAuth = () => {
 	return (

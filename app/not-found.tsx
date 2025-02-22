@@ -1,4 +1,4 @@
-import { Button } from '@heroui/button'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default function NotFound() {
@@ -7,7 +7,7 @@ export default function NotFound() {
 			<h1 className=''>Not Found</h1>
 			<h2>Could not find page</h2>
 			<Link href='/'>
-				<Button color='primary' size='lg' className='text-zinc-900 font-bold'>
+				<Button  className=''>
 					Return Home
 				</Button>
 			</Link>

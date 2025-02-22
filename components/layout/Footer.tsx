@@ -2,7 +2,6 @@
 
 import { socialIcons } from '@/constants/SocialIcons'
 import SearchBar from './SearchBar'
-import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 import Link from 'next/link'
 import React from 'react'
 
@@ -17,7 +16,7 @@ const Footer = () => {
 				</h5>
 				<SearchBar />
 				<div className='flex items-center justify-center gap-8 lg:gap-16  text-2xl'>
-					{socialIcons.map(({ href, icon, title }) => (
+					{socialIcons.map(({ href, icon }) => (
 						<Link
 							href={href}
 							key={href}

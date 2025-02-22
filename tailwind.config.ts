@@ -1,74 +1,77 @@
-import { heroui } from '@heroui/theme'
 import type { Config } from "tailwindcss"
 import { withUt } from "uploadthing/tw"
 
 export default withUt({
-  darkMode: ["class"],
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/components/(avatar|button|card|divider|drawer|dropdown|input|ripple|spinner|modal|menu|popover|form).js"
-  ],
-  theme: {
-
-    extend: {
-      backgroundImage: {
-        hero: "url('/images/mainSlider_bg.webp')"
-      },
-      container: {
-        padding: {
-          DEFAULT: '1rem',
-          sm: '2rem',
-          lg: '4rem',
-          xl: '5rem',
-          '2xl': '6rem'
-        },
-        center: true
-      },
-    }
-  },
-  plugins: [require("tailwindcss-animate"),
-  heroui({
-    prefix: "heroui", // prefix for themes variables
-    addCommonColors: true, // override common colors (e.g. "blue", "green", "pink").
-    defaultTheme: "light", // default theme from the themes object
-    defaultExtendTheme: "light", // default theme to extend on custom themes
-    layout: {}, // common layout tokens (applied to all themes)
-    themes: {
-      light: {
-        layout: {}, // light theme layout tokens
-        colors: {
-          default: '#D4D4D8', // zinc-300
-          foreground: '#27272A', // zinc-800
-          background: '#E4E4E7', // zinc-200
-          focus: '#F6CC44',
-          primary: '#F7B750',
-          secondary: '#28B4FF',
-          success: '#90E540',
-          warning: '#FFC02D',
-          danger: '#DB3A2A',
-          content4: '#52525B' // zinc-600
-        }, // light theme colors
-      },
-      dark: {
-        layout: {
-
-        }, // dark theme layout tokens
-        colors: {
-          default: '#18181B', // zinc-900
-          background: '#27272A', // zinc-800
-          foreground: '#E4E4E7', // zinc-200
-          focus: '#F7B750',
-          primary: '#F6CC44',
-          secondary: '#025687',
-          success: '#90E540',
-          warning: '#FFC02D',
-          danger: '#93121A',
-          content4: '#A1A1AA' // zinc-400
-        }, // dark theme colors
-      },
-      // ... custom themes
-    },
-  }),],
+	darkMode: ["class"],
+	content: [
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+		
+	],
+	theme: {
+		extend: {
+			backgroundImage: {
+				hero: 'url(/images/mainSlider_bg.webp)'
+  		},
+			container: {
+				padding: {
+					DEFAULT: '1rem',
+					sm: '2rem',
+					lg: '4rem',
+					xl: '5rem',
+					'2xl': '6rem'
+				},
+				center: true
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
+			},
+			colors: {
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
+				card: {
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
+				},
+				primary: {
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
+				},
+				secondary: {
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
+				},
+				muted: {
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
+				},
+				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
+				},
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))'
+				},
+				border: 'hsl(var(--border))',
+				input: 'hsl(var(--input))',
+				ring: 'hsl(var(--ring))',
+				chart: {
+					'1': 'hsl(var(--chart-1))',
+					'2': 'hsl(var(--chart-2))',
+					'3': 'hsl(var(--chart-3))',
+					'4': 'hsl(var(--chart-4))',
+					'5': 'hsl(var(--chart-5))'
+				}
+			}
+		}
+	},
+	plugins: [require("tailwindcss-animate")],
 }) satisfies Config 

@@ -1,14 +1,14 @@
 'use client'
 
-import { auth, currentUser } from '@clerk/nextjs/server'
-import Image from 'next/image'
-import {
-	SignedIn,
-	SignedOut,
-	SignInButton,
-	SignUpButton,
-	UserButton,
-} from '@clerk/nextjs'
+// import { auth, currentUser } from '@clerk/nextjs/server'
+// import Image from 'next/image'
+// import {
+// 	SignedIn,
+// 	SignedOut,
+// 	SignInButton,
+// 	SignUpButton,
+// 	UserButton,
+// } from '@clerk/nextjs'
 import Logo from './Logo'
 import SearchBar from './SearchBar'
 import MobileDrawer from './MobileDrawer'

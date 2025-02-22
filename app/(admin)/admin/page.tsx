@@ -5,11 +5,10 @@ export default async function AdminPage() {
 	if (!user) {
 		return <div className=''>Not signed in</div>
 	}
-	console.log(user?.fullName)
 
 	return (
-		<section className='w-full lg:w-3/4 h-full  bg-blue-500/50  min-h-dvh'>
-			<div className=''>{user?.hasImage}</div>
+		<section className=' h-full min-h-dvh'>
+			<h2 className=''>{user?.fullName}</h2>
 		</section>
 	)
 }

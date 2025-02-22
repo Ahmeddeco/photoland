@@ -1,7 +1,14 @@
 'use client'
 
-import { Card, CardHeader, CardBody } from '@heroui/card'
 import CategoriesNavLinks from '../CategoriesNavLinks'
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from '@/components/ui/card'
 
 const CategoriesAside = () => {
 	return (
@@ -12,9 +19,9 @@ const CategoriesAside = () => {
 					browse Categories
 				</CardHeader>
 				{/* CardBody */}
-				<CardBody className='pt-6 flex flex-col gap-6'>
+				<CardContent className='pt-6 flex flex-col gap-6'>
 					<CategoriesNavLinks />
-				</CardBody>
+				</CardContent>
 			</Card>
 		</>
 	)

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import heroImg from '@/public/images/heroImage.png'
-import { Button } from '@heroui/button'
+import { Button } from '@/components/ui/button'
 
 const MainCard = () => {
 	return (
@@ -11,14 +11,7 @@ const MainCard = () => {
 					<p className='uppercase'>special offer</p>
 					<h2 className='uppercase'>save 20% on your first order</h2>
 				</div>
-				<Button
-					className='uppercase text-zinc-900 font-bold '
-					variant='solid'
-					color='primary'
-					size='lg'
-				>
-					Shop now
-				</Button>
+				<Button className='uppercase text-zinc-900 font-bold '>Shop now</Button>
 			</div>
 			{/* Image */}
 			<div className='h-full flex-1 w-full flex items-center justify-center '>

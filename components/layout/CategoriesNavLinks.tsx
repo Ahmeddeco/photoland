@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation'
 
 const CategoriesNavLinks = () => {
 	const pathName = usePathname()
-	console.log(pathName)
 
 	return (
 		<div className='flex flex-col gap-8 uppercase '>

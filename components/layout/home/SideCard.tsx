@@ -1,5 +1,5 @@
+import { Button } from '@/components/ui/button'
 import { heroSideRight } from '@/constants/HeroSideRight'
-import { Button } from '@heroui/button'
 import Image from 'next/image'
 
 const SideCard = () => {
@@ -16,8 +16,6 @@ const SideCard = () => {
 						<Button
 							className='uppercase text-zinc-900 font-semibold'
 							color='primary'
-							variant='solid'
-							size='lg'
 						>
 							shop now
 						</Button>

@@ -1,6 +1,7 @@
 import Form from 'next/form'
 import { IoSearch } from 'react-icons/io5'
-import { Button, Input } from '@heroui/react'
+import { Button } from '../ui/button'
+import { Input } from '../ui/input'
 
 type SearchBarTypes = {
 	onPress?: () => void
@@ -25,18 +26,11 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 					type='text'
 					placeholder='Search for a product'
 					className='h-full w-full lg:w-4/5'
-					color='primary'
-					variant='faded'
-					size='lg'
-					radius='sm'
+					
 				/>
 				<Button
 					className='lg:flex hidden items-center justify-center w-1/5'
 					type='submit'
-					variant='solid'
-					color='primary'
-					size='lg'
-					radius='sm'
 				>
 					<IoSearch className='text-zinc-900 text-4xl font-black' />
 				</Button>
@@ -45,12 +39,7 @@ const SearchBar = ({ onPress }: SearchBarTypes) => {
 				<Button
 					className='flex lg:hidden items-center justify-center '
 					type='submit'
-					variant='solid'
-					color='primary'
-					fullWidth
-					radius='sm'
-					size='lg'
-					onPress={delay}
+					onClick={delay}
 				>
 					<IoSearch className='text-zinc-900 text-2xl font-bold' />
 				</Button>
