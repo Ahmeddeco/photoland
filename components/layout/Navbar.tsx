@@ -25,7 +25,7 @@ const Navbar = () => {
 
 	return (
 		<header className='lg:h-20 h-auto fixed top-0 right-0 left-0 lg:py-4 py-2 bg-muted/95 z-50 shadow-lg'>
-			<nav className='container lg:flex items-center justify-between hidden'>
+			<nav className='container lg:flex items-center justify-between hidden gap'>
 				{/* Logo */}
 				<div className=' w-2/12'>
 					<Logo />
@@ -36,7 +36,7 @@ const Navbar = () => {
 				</div>
 
 				{/* ThemeSwitcher & Auth */}
-				<div className='flex items-center justify-end gap-2 lg:gap-4 w-3/12'>
+				<div className='flex items-center justify-end gap w-3/12'>
 					<ThemeSwitcher />
 					<UserAuth />
 				</div>
@@ -45,7 +45,7 @@ const Navbar = () => {
 			{/* Mobile Nav */}
 			<nav className='lg:hidden flex items-center justify-between container'>
 				<Logo />
-				<div className='flex items-center justify-center gap-4 '>
+				<div className='flex items-center justify-center gap '>
 					<ThemeSwitcher />
 					<UserAuth />
 					<MobileDrawer />

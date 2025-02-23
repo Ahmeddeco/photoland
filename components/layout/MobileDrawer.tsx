@@ -27,7 +27,7 @@ const MobileDrawer = () => {
 				<div className='my-12'>
 					<CategoriesNavLinks />
 				</div>
-				<SheetFooter className='flex flex-col justify-between items-center gap-12'>
+				<SheetFooter className='flex flex-col justify-between items-center gap'>
 					<SearchBar />
 					<Button asChild>
 						<Logo />

@@ -29,7 +29,7 @@
 		@apply text-[20px];
 	}
 	p {
-		@apply text-[16px];
+		@apply text-[16px] text-muted-foreground;
 	}
 }
 
@@ -65,7 +65,7 @@
 	.dark {
 		--background: 240 10% 3.9%;
 		--foreground: 60 9.1% 97.8%;
-		--card: 20 14.3% 4.1%;
+		--card: 240 5.9% 10%;
 		--card-foreground: 60 9.1% 97.8%;
 		--popover: 20 14.3% 4.1%;
 		--popover-foreground: 60 9.1% 97.8%;
@@ -81,7 +81,7 @@
 		--destructive-foreground: 60 9.1% 97.8%;
 		--border: 12 6.5% 15.1%;
 		--input: 12 6.5% 15.1%;
-		--ring: 35.5 91.7% 32.9%;
+		--ring: 43.3 96.4% 56.3%;
 		--chart-1: 220 70% 50%;
 		--chart-2: 160 60% 45%;
 		--chart-3: 30 80% 55%;
@@ -90,13 +90,11 @@
 	}
 }
 
-
-
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+	* {
+		@apply border-border outline-ring/50;
 	}
-  body {
-    @apply bg-background text-foreground;
+	body {
+		@apply bg-background text-foreground;
 	}
 }

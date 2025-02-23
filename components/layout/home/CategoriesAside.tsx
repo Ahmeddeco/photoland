@@ -11,7 +11,7 @@ const CategoriesAside = () => {
 				{/* CardHeader */}
 				<CardHeader>browse Categories</CardHeader>
 				{/* CardBody */}
-				<CardContent className='pt-6 flex flex-col gap-6'>
+				<CardContent className='pt-6 flex flex-col gap'>
 					<CategoriesNavLinks />
 				</CardContent>
 			</Card>

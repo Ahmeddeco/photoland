@@ -6,7 +6,7 @@ const CategoriesNavLinks = () => {
 	const pathName = usePathname()
 
 	return (
-		<div className='flex flex-col gap-8 uppercase '>
+		<div className='flex flex-col gap uppercase '>
 			{categories.map(({ href, title }) => (
 				<Link
 					href={`/category/${href}`}

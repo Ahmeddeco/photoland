@@ -8,7 +8,8 @@ export default async function AdminPage() {
 
 	return (
 		<section className=' h-full min-h-dvh'>
-			<h2 className=''>{user?.fullName}</h2>
+			<h1 className=''>{user?.fullName}</h1>
+			<h2>Admin Dashboard</h2>
 		</section>
 	)
 }

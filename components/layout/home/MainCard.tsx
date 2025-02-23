@@ -7,7 +7,7 @@ const MainCard = () => {
 	return (
 		<Card className='dark:bg-hero bg-cover bg-muted bg-right-top lg:h-full h-auto flex lg:flex-row flex-col-reverse items-center justify-center px-4 lg:px-8 py-12 rounded-lg'>
 			{/* Text */}
-			<CardContent className=' h-full flex-col flex items-start justify-center flex-1 gap-4 lg:gap-8'>
+			<CardContent className=' h-full flex-col flex items-start justify-center flex-1 gap'>
 				<div className='flex flex-col '>
 					<p className='uppercase'>special offer</p>
 					<h2 className='uppercase'>save 20% on your first order</h2>
