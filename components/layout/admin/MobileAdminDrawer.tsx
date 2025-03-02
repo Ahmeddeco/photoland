@@ -1,31 +1,61 @@
+'use client'
+
 import {
 	Sheet,
 	SheetContent,
-	SheetDescription,
+	SheetFooter,
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger,
 } from '@/components/ui/sheet'
-import { Menu } from 'lucide-react'
+import { adminLinks } from '@/constants/admin'
+import { Menu, Shield } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import Logo from '../Logo'
+import SearchBar from '../SearchBar'
+import { Button } from '@/components/ui/button'
 
 const MobileAdminDrawer = () => {
+	const pathName = usePathname()
+
 	return (
-		<div className='lg:hidden block  bottom-16 right-16 fixed'>
-			<Sheet>
-				<SheetTrigger>
-					<Menu size={32} strokeWidth={2.5} />
-				</SheetTrigger>
-				<SheetContent>
-					<SheetHeader>
-						<SheetTitle>Are you absolutely sure?</SheetTitle>
-						<SheetDescription>
-							This action cannot be undone. This will permanently delete your
-							account and remove your data from our servers.
-						</SheetDescription>
-					</SheetHeader>
-				</SheetContent>
-			</Sheet>
-		</div>
+		<Sheet>
+			<SheetTrigger>
+				<Button
+					size={'icon'}
+					variant='default'
+					className='rounded-full flex items-center justify-center'
+					asChild
+				>
+					<Shield />
+				</Button>
+			</SheetTrigger>
+			<SheetContent className='flex flex-col justify-between '>
+				<SheetHeader>
+					<SheetTitle className='uppercase'>admin dashboard</SheetTitle>
+				</SheetHeader>
+				<div className='flex flex-col gap pt-6'>
+					{adminLinks.map(({ href, title }) => (
+						<Link
+							href={`/admin/${href}`}
+							key={href}
+							className={`${
+								pathName === `/admin/${href}` ? 'text-primary  ' : ''
+							} uppercase`}
+						>
+							{title}
+						</Link>
+					))}
+				</div>
+				<SheetFooter className='flex flex-col justify-between items-center gap'>
+					<SearchBar />
+					<Button asChild>
+						<Logo />
+					</Button>
+				</SheetFooter>
+			</SheetContent>
+		</Sheet>
 	)
 }
 

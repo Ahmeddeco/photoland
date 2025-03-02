@@ -33,19 +33,17 @@ export default function RootLayout({
 				variables: {
 					colorBackground: '#2a2b31',
 					fontSize: 'xl',
-					colorPrimary: '#F6CC44',
-					colorInputText: '#F6CC44',
+					colorPrimary: '#facc15',
+					colorInputText: '#facc15',
 				},
 				layout: {
-					socialButtonsPlacement: 'bottom',
-					socialButtonsVariant: 'blockButton',
+					socialButtonsPlacement: 'top',
+					socialButtonsVariant: 'auto',
 				},
 			}}
 		>
 			<html lang='en' suppressHydrationWarning>
-				<body
-					className={`${expo2.className} antialiased  text-foreground `}
-				>
+				<body className={`${expo2.className} antialiased  text-foreground `}>
 					<ThemeProvider
 						attribute='class'
 						defaultTheme='light'

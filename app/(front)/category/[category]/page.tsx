@@ -8,11 +8,8 @@ export default async function CategoryPage({
 	const category = (await params).category
 
 	return (
-		<div className='flex gap'>
-			<aside className='hidden lg:block'>
-				<CategoriesAside />
-			</aside>
-			<main>{`CategoryPage ${category}`}</main>
-		</div>
+		<>
+			<h2>{`CategoryPage ${category}`}</h2>
+		</>
 	)
 }

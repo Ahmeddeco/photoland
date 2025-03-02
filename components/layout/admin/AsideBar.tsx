@@ -13,7 +13,6 @@ import {
 
 const AsideBar = () => {
 	const pathName = usePathname()
-	console.log(pathName)
 
 	return (
 		<>

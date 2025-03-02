@@ -25,7 +25,7 @@ const Footer = () => {
 								href={href}
 								key={href}
 								target='_blank '
-								className='hover:text-primary transition-all'
+								className='hover:text-primary transition-all '
 							>
 								{React.createElement(icon)}
 							</Link>

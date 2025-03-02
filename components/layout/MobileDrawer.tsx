@@ -20,7 +20,7 @@ const MobileDrawer = () => {
 			<SheetTrigger>
 				<Menu size={32} strokeWidth={2.5} />
 			</SheetTrigger>
-			<SheetContent>
+			<SheetContent className='flex flex-col justify-between '>
 				<SheetHeader className='uppercase'>
 					<SheetTitle>category</SheetTitle>
 				</SheetHeader>

@@ -5,13 +5,18 @@ import {
 	SignUpButton,
 	UserButton,
 } from '@clerk/nextjs'
+import { Button } from '../ui/button'
 
 const UserAuth = () => {
 	return (
 		<>
 			<SignedOut>
-				<SignInButton />
-				<SignUpButton />
+				<Button asChild  >
+					<SignInButton />
+				</Button>
+				<Button asChild  >
+					<SignUpButton />
+				</Button>
 			</SignedOut>
 			<SignedIn>
 				<UserButton />

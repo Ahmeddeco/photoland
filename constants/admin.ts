@@ -1,8 +1,8 @@
 export const adminLinks = [
-  {
-    title: 'admin',
-    href: '/'
-  },
+  // {
+  //   title: 'admin',
+  //   href: '/'
+  // },
   {
     title: 'product',
     href: 'product'
