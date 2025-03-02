@@ -3,7 +3,7 @@ import { CategoryName } from "@prisma/client"
 import { CompleteProduct, RelatedProductModel } from "./index"
 
 export const CategoryModel = z.object({
-  id: z.string().uuid(),
+  id: z.string().uuid({ message: "Invalid UUID" }),
   title: z.nativeEnum(CategoryName),
 })
 
