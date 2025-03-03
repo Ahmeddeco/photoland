@@ -38,7 +38,7 @@ model Product {
   description   String ///@zod.min(20, { message: "Must be 20 or more characters long" }).max(150, { message: "Must be 150 or fewer characters long" })
   model         String ///@zod.min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" })
   imageUrl      String[] @unique
-  price         Float    @default(0)
+  price         Float    @default(0.0)
   discount      Int?     @default(0)
   isNew         Boolean
   createdAt     DateTime @default(now())
