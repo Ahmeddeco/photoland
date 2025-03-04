@@ -2,7 +2,7 @@ import * as z from "zod"
 import { CompleteProduct, RelatedProductModel } from "./index"
 
 export const SellerModel = z.object({
-  id: z.string(),
+  id: z.number().int(),
   name: z.string().min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" }),
   email: z.string().email().nullish(),
   mobile: z.number().int(),

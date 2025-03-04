@@ -2,7 +2,7 @@ import * as z from "zod"
 import { CompleteProduct, RelatedProductModel } from "./index"
 
 export const ManufactureModel = z.object({
-  id: z.string().uuid({ message: "Invalid UUID" }),
+  id: z.number().int(),
   name: z.string().min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" }),
   address: z.string().nullish(),
   phone: z.number().int(),
