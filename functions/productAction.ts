@@ -14,7 +14,8 @@ export async function addProduct(formData: FormData) {
         discount: Number(formData.get('discount') as string),
         manufactureId: Number(formData.get('manufactureId') as string),
         categoryId: Number(formData.get('categoryId') as string),
-        sellerId: Number(formData.get('sellerId') as string),
+        sellerId: Number(formData.get('seller') as string),
+        isNew: Boolean(formData.get('isNew') as string)
       }
     })
   } catch (error) {

@@ -9,6 +9,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
 import { ThemeProvider } from '@/components/themes/theme-provider'
 import localFont from 'next/font/local'
+import { Toaster } from '@/components/ui/sonner'
 
 const expo2 = localFont({
 	src: '../public/fonts/Exo2-VariableFont_wght.ttf',
@@ -54,6 +55,7 @@ export default function RootLayout({
 						<Navbar />
 						<main className='min-h-dvh h-auto container lg:mt-28 mt-20'>
 							{children}
+							<Toaster />
 						</main>
 						<Footer />
 					</ThemeProvider>
