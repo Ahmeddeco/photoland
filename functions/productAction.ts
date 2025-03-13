@@ -1,7 +1,12 @@
 'use server'
 
 import { prisma } from "@/lib/prisma"
+import { addProductSchema } from "@/lib/zodSchema"
+import { ProductSchema } from "@/prisma/zod"
+import { parseWithZod } from "@conform-to/zod"
 import { redirect } from "next/navigation"
+import { toast } from "sonner"
+import { z } from "zod"
 
 export async function addProduct(formData: FormData) {
   try {
@@ -26,4 +31,15 @@ export async function addProduct(formData: FormData) {
 }
 
 
+export async function addProductConform(prevState: unknown, formData: FormData) {
+  const rawData = formData
+  console.log('rawData is ', rawData)
+  const submissionData = parseWithZod(formData, { schema: addProductSchema })
 
+  if (submissionData.status !== 'success') {
+    return submissionData.reply()
+  }
+  console.log(submissionData)
+
+  redirect('/admin/product')
+}

@@ -1,7 +1,7 @@
 import * as z from "zod"
-import { CompleteProduct, RelatedProductModel } from "./index"
+import { CompleteProduct, RelatedProductSchema } from "./index"
 
-export const SellerModel = z.object({
+export const SellerSchema = z.object({
   id: z.number().int(),
   name: z.string().min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" }),
   email: z.string().email().nullish(),
@@ -9,15 +9,15 @@ export const SellerModel = z.object({
   address: z.string().nullish(),
 })
 
-export interface CompleteSeller extends z.infer<typeof SellerModel> {
+export interface CompleteSeller extends z.infer<typeof SellerSchema> {
   Product: CompleteProduct[]
 }
 
 /**
- * RelatedSellerModel contains all relations on your model in addition to the scalars
+ * RelatedSellerSchema contains all relations on your model in addition to the scalars
  *
  * NOTE: Lazy required in case of potential circular dependencies within schema
  */
-export const RelatedSellerModel: z.ZodSchema<CompleteSeller> = z.lazy(() => SellerModel.extend({
-  Product: RelatedProductModel.array(),
+export const RelatedSellerSchema: z.ZodSchema<CompleteSeller> = z.lazy(() => SellerSchema.extend({
+  Product: RelatedProductSchema.array(),
 }))

@@ -1,21 +1,21 @@
 import * as z from "zod"
 import { CategoryName } from "@prisma/client"
-import { CompleteProduct, RelatedProductModel } from "./index"
+import { CompleteProduct, RelatedProductSchema } from "./index"
 
-export const CategoryModel = z.object({
+export const CategorySchema = z.object({
   id: z.number().int(),
   title: z.nativeEnum(CategoryName),
 })
 
-export interface CompleteCategory extends z.infer<typeof CategoryModel> {
+export interface CompleteCategory extends z.infer<typeof CategorySchema> {
   Product: CompleteProduct[]
 }
 
 /**
- * RelatedCategoryModel contains all relations on your model in addition to the scalars
+ * RelatedCategorySchema contains all relations on your model in addition to the scalars
  *
  * NOTE: Lazy required in case of potential circular dependencies within schema
  */
-export const RelatedCategoryModel: z.ZodSchema<CompleteCategory> = z.lazy(() => CategoryModel.extend({
-  Product: RelatedProductModel.array(),
+export const RelatedCategorySchema: z.ZodSchema<CompleteCategory> = z.lazy(() => CategorySchema.extend({
+  Product: RelatedProductSchema.array(),
 }))

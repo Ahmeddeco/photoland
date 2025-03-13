@@ -13,7 +13,7 @@ generator zod {
   output                = "./zod" // (default) the directory where generated zod schemas will be saved
   relationModel         = true // (default) Create and export both plain and related models.
   modelCase             = "PascalCase" // (default) Output models using pascal case (ex. UserModel, PostModel)
-  modelSuffix           = "Model" // (default) Suffix to apply to your prisma models when naming Zod schemas
+  modelSuffix           = "Schema" // (default) Suffix to apply to your prisma models when naming Zod schemas
   useDecimalJs          = true // represent the prisma Decimal type using Decimal.js (as Prisma does)
   prismaJsonNullability = true // (default) uses prisma's scheme for JSON field nullability
 }
@@ -33,16 +33,16 @@ enum CategoryName {
 }
 
 model Product {
-  id            String   @id @default(uuid()) /// @zod.uuid({ message: "Invalid UUID" })
+  id            String   @id @default(uuid()) ///@zod.nullish()
   title         String ///@zod.min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" })
   description   String ///@zod.min(20, { message: "Must be 20 or more characters long" }).max(150, { message: "Must be 150 or fewer characters long" })
   model         String ///@zod.min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" })
-  imageUrl      String[] @unique
+  imageUrl      String[] @unique 
   price         Int      @default(0)
   discount      Int?     @default(0) ///@zod.max(99,{message:"Must be at most 99"})
   isNew         Boolean  @default(false)
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  createdAt     DateTime @default(now()) ///@zod.nullish()
+  updatedAt     DateTime @updatedAt ///@zod.nullish()
   manufactureId Int
   categoryId    Int
   sellerId      Int
