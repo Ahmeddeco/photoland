@@ -1,4 +1,4 @@
-import CategoriesAside from '@/components/layout/home/CategoriesAside'
+import CategoriesAside from '@/components/shared/home/CategoriesAside'
 
 export default async function CategoryPage({
 	params,

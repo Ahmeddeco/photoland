@@ -1,5 +1,5 @@
-import AsideBar from '@/components/layout/admin/AsideBar'
-import MobileAdminDrawer from '@/components/layout/admin/MobileAdminDrawer'
+import AsideBar from '@/components/shared/admin/AsideBar'
+import MobileAdminDrawer from '@/components/shared/admin/MobileAdminDrawer'
 
 export default function AdminLayout({
 	children,
