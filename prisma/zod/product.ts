@@ -12,9 +12,9 @@ export const ProductSchema = z.object({
   isNew: z.boolean(),
   createdAt: z.date().nullish(),
   updatedAt: z.date().nullish(),
-  manufactureId: z.number().int(),
-  categoryId: z.number().int(),
-  sellerId: z.number().int(),
+  manufactureId: z.string(),
+  categoryId: z.string(),
+  sellerId: z.string(),
 })
 
 export interface CompleteProduct extends z.infer<typeof ProductSchema> {

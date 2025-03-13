@@ -37,15 +37,15 @@ model Product {
   title         String ///@zod.min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" })
   description   String ///@zod.min(20, { message: "Must be 20 or more characters long" }).max(150, { message: "Must be 150 or fewer characters long" })
   model         String ///@zod.min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" })
-  imageUrl      String[] @unique 
+  imageUrl      String[] @unique
   price         Int      @default(0)
   discount      Int?     @default(0) ///@zod.max(99,{message:"Must be at most 99"})
   isNew         Boolean  @default(false)
   createdAt     DateTime @default(now()) ///@zod.nullish()
   updatedAt     DateTime @updatedAt ///@zod.nullish()
-  manufactureId Int
-  categoryId    Int
-  sellerId      Int
+  manufactureId String
+  categoryId    String
+  sellerId      String
 
   // RELATIONS
   manufacture Manufacture @relation(fields: [manufactureId], references: [id])
@@ -54,13 +54,13 @@ model Product {
 }
 
 model Category {
-  id      Int          @id @default(autoincrement())
+  id      String       @id @default(uuid())
   title   CategoryName
   Product Product[]
 }
 
 model Manufacture {
-  id      Int       @id @default(autoincrement())
+  id      String    @id @default(uuid())
   name    String ///@zod.min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" })
   address String?
   phone   Int       @unique
@@ -69,7 +69,7 @@ model Manufacture {
 }
 
 model Seller {
-  id      Int       @id @default(autoincrement())
+  id      String    @id @default(uuid())
   name    String ///@zod.min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" })
   email   String?   @unique ///@zod.email()
   mobile  Int       @unique

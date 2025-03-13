@@ -1,5 +1,6 @@
 import { z } from "zod"
 
+
 export const ProductSchema = z.object({
   id: z.string().nullish(),
   title: z.string().min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" }),
@@ -11,7 +12,7 @@ export const ProductSchema = z.object({
   isNew: z.boolean(),
   createdAt: z.date().nullish(),
   updatedAt: z.date().nullish(),
-  manufactureId: z.number().int(),
-  categoryId: z.number().int(),
-  sellerId: z.number().int(),
+  manufactureId: z.string(),
+  categoryId: z.string(),
+  sellerId: z.string(),
 })

@@ -3,7 +3,7 @@ import { CategoryName } from "@prisma/client"
 import { CompleteProduct, RelatedProductSchema } from "./index"
 
 export const CategorySchema = z.object({
-  id: z.number().int(),
+  id: z.string(),
   title: z.nativeEnum(CategoryName),
 })
 
