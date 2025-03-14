@@ -9,5 +9,5 @@ enum CategoryName {
 
 export const CategorySchema = z.object({
   id: z.string(),
-  title: z.nativeEnum(CategoryName),
+  title: z.string(),
 })

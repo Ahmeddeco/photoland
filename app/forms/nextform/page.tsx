@@ -7,12 +7,12 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from '@/components/ui/select'
+import { ManufactureSchema } from '@/schemas/manufactureSchema'
 
-import { manufactureForm, manufactures } from '@/enum/manufactureEnum'
 import Form from 'next/form'
 
 export default async function NextformPage() {
-	const manuf = await manufactures()
+	const manuf = await Manufa()
 	console.log(manuf)
 
 	return (

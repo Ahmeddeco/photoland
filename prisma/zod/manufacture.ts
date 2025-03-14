@@ -3,9 +3,9 @@ import { CompleteProduct, RelatedProductSchema } from "./index"
 
 export const ManufactureSchema = z.object({
   id: z.string(),
-  name: z.string().min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" }),
+  title: z.string().min(3, { message: "Must be 3 or more characters long" }).max(50, { message: "Must be 50 or fewer characters long" }),
   address: z.string().nullish(),
-  phone: z.number().int(),
+  phone: z.string(),
   website: z.string().url({ message: "Invalid url" }).nullish(),
 })
 
